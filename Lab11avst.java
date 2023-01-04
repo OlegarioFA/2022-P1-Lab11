@@ -22,6 +22,16 @@ public class Lab11avst
     public static void computePrimes(boolean primes[])
     {
         System.out.println("\nCOMPUTING PRIME NUMBERS");
+        for(int k = 2; k < primes.length; k++){
+            primes[k] = true;
+        }
+
+        for(int k = 2; k < primes.length; k += 2){
+            primes[k] = false;
+
+
+
+        }
 
     }
 
@@ -30,7 +40,14 @@ public class Lab11avst
         System.out.println("\n\nPRIMES BETWEEN 1 AND "+ primes.length);
         System.out.println();
 
+        for(int k = 2; k < primes.length; k++){
+            if(primes[k] == true) {
+                System.out.print(k + " ");
+            }
+        }
+
     }
+
 
 }
 
