@@ -25,12 +25,10 @@ public class Lab11avst
         for(int k = 2; k < primes.length; k++){
             primes[k] = true;
         }
-
-        for(int k = 2; k < primes.length; k += 2){
-            primes[k] = false;
-
-
-
+        for(int index = 2; index < primes.length; index++) {
+            for (int k = 2 * index; k < primes.length; k += index) {
+                primes[k] = false;
+            }
         }
 
     }
